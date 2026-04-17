@@ -75,8 +75,6 @@ with open(output_csv_path, mode="w", newline="") as f:
             if cls == 0:
                 h = y2 - y1
                 y_center = y1 + int(h * 0.50)
-
-                # CROP FROM THE BRIGHT GHOST FRAME
                 torso_crop = ai_frame[y1:y_center, x1:x2]
 
                 if torso_crop.size == 0:
